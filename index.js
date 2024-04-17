@@ -17,7 +17,7 @@ app.use(
 app.use(express.json());
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-mongoose.connect('process.env.MONGODB_URI');
+mongoose.connect('mongodb+srv://sunilkumar47260:onamiWU1JUN9SZny@cluster0.giviwl5.mongodb.net/todo_database');
 
 app.use('/auth',authRoutes);
 app.use('/todo',todoRoutes);
