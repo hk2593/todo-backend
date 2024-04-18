@@ -10,7 +10,7 @@ const signup=async(req,res)=>{
         }
         const isavailable=await User.findOne({email});
         if(isavailable){
-            return res.status(200).json({msg:"email id already exists"});
+            return res.status(400).json({msg:"email id already exists"});
         }
 
         
